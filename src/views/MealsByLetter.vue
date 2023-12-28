@@ -40,13 +40,18 @@
 
 <script setup>
 import store from '../store';
-import { computed, onMounted } from 'vue';
+import { computed, onMounted,watch } from 'vue';
 import { useRoute } from 'vue-router';
 import YouTubeButton from "../components/YouTubeButton.vue";
 
 const route = useRoute()
+
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 const meals = computed(()=>store.state.mealsByLetter)
+
+watch(()=>{
+  store.dispatch('searchMealsByLetter', route.params.letter)
+})
 onMounted(()=>{
   store.dispatch('searchMealsByLetter', route.params.letter)
 })
