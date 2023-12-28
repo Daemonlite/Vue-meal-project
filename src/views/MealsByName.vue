@@ -29,12 +29,8 @@
           sapiente sit, debitis quidem inventore
         </p>
         <div class="flex items-center ">
-          <a
-            :href="meal.strYoutube"
-            target="_blank"
-            class="px-3 py-2 rounded border-2 border-red-600 bg-red-600 text-white transition-colors"
-            >YouTube</a
-          >
+
+        <YouTubeButton :href="meal.strYoutube">Youtube</YouTubeButton>
 
         </div>
       </div>
@@ -46,6 +42,7 @@
 import store from "../store";
 import { computed, ref,onMounted } from "vue";
 import {useRoute} from "vue-router"
+import YouTubeButton from "../components/YouTubeButton.vue";
 
 const meals = computed(() => store.state.searchedMeals);
 

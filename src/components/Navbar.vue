@@ -6,7 +6,7 @@
    
     <div class="flex items-center">
       <router-link :to="{ name: 'byName' }" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100">
-       Search Meals by name
+       Search Meals 
        </router-link>
 
       <router-link :to="{ name: 'byLetter' }" class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100">
