@@ -1,7 +1,7 @@
 <template>
   <div class="p-8">
     <input
-      type="text"
+      type="search"
       v-model="keyword"
       class="rounded border-spacing-2 border-gray-200 w-full"
       placeholder="Search for meals"
